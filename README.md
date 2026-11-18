@@ -68,9 +68,10 @@ The real proof of work needs about 384 MiB of RAM per mining thread and verifyin
 Tested so far:
 
 * 64-bit ARM phone (Motorola moto g53 5G): syncs, mines (~5 H/s per thread), about 5 minutes per block with one miner.
-* 32-bit ARM phone with little RAM: **cannot keep up** (about 4 s to verify each block, ~0.1-0.3 H/s, repeated disconnects).
+* 32-bit ARM phone with little RAM (Termux, `--no-governor`): works but is slow. Initial sync is painful (about 4 s to verify each block,
+  ~10 minutes for the first 25 blocks, with some disconnects), then it keeps up at ~0.2-0.3 H/s.
 
-Use a 64-bit device with enough free RAM.
+A 64-bit device with enough free RAM is strongly recommended.
 
 ## Android app
 
