@@ -7,6 +7,11 @@ command -v cargo >/dev/null || { echo "Instala Rust primero: curl https://sh.rus
 if [ "$(free -m | awk '/Mem:/{print $2}')" -lt 1800 ] && [ ! -f /swapfile ]; then
   fallocate -l 2G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile
 fi
+# la testnet verifica PoW real (~384 MiB transitorios): con 1 GB de RAM hace falta swap también al ejecutar
+if [ "$(free -m | awk '/Swap:/{print $2}')" -lt 1024 ] && [ ! -f /swapfile ]; then
+  fallocate -l 2G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile
+  grep -q swapfile /etc/fstab || echo '/swapfile none swap sw 0 0' >> /etc/fstab
+fi
 cargo build --release -p armax-node -j 1
 id armax >/dev/null 2>&1 || useradd --system --home /var/lib/armax --shell /usr/sbin/nologin armax
 install -d /opt/armax && install -m 755 target/release/armax-node /opt/armax/armax-node

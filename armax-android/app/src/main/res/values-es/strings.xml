@@ -29,6 +29,7 @@
     <string name="node_starting">Arrancando…</string>
     <string name="error_prefix">Error: %1$s</string>
     <string name="network_fast">RED DE PRUEBAS FAST</string>
+    <string name="network_testnet">TESTNET</string>
     <string name="network_devnet">DEVNET</string>
     <string name="balance">Saldo</string>
     <string name="spendable">Gastable</string>
@@ -93,7 +94,7 @@
     <string name="settings_title">Ajustes</string>
     <string name="settings_note">Se aplican al iniciar el nodo.</string>
     <string name="settings_network_section">Red</string>
-    <string name="settings_testnet">Red de pruebas rápida</string>
+    <string name="settings_testnet">Red de demostración rápida (PoW reducido, solo para probar la app)</string>
     <string name="settings_connect">Conectar a (IP:PUERTO, separados por coma)</string>
     <string name="settings_pin">Clave fijada (IP:PUERTO=CLAVE64HEX)</string>
     <string name="settings_mining_section">Minería</string>

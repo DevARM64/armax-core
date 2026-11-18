@@ -29,6 +29,7 @@
     <string name="node_starting">Starting…</string>
     <string name="error_prefix">Error: %1$s</string>
     <string name="network_fast">FAST TESTNET</string>
+    <string name="network_testnet">TESTNET</string>
     <string name="network_devnet">DEVNET</string>
     <string name="balance">Balance</string>
     <string name="spendable">Spendable</string>
@@ -93,7 +94,7 @@
     <string name="settings_title">Settings</string>
     <string name="settings_note">Applied when the node starts.</string>
     <string name="settings_network_section">Network</string>
-    <string name="settings_testnet">Fast test network</string>
+    <string name="settings_testnet">Quick demo network (reduced proof of work, only to try the app)</string>
     <string name="settings_connect">Connect to (IP:PORT, comma separated)</string>
     <string name="settings_pin">Pinned key (IP:PORT=64-HEX KEY)</string>
     <string name="settings_mining_section">Mining</string>

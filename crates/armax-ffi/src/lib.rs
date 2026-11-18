@@ -430,7 +430,7 @@ unsafe fn handle_ref<'a>(h: *mut c_void) -> Result<&'a mut Handle, i32> {
 
 /// Arranca el nodo.
 ///
-/// `config_json` (objeto plano): `network` ("fast"|"devnet", obligatorio), `data_dir` (obligatorio),
+/// `config_json` (objeto plano): `network` ("fast"|"devnet"|"testnet", obligatorio), `data_dir` (obligatorio),
 /// `listen` ("IP:PUERTO", opcional), `connect` ("IP:PUERTO,IP:PUERTO"), `mine` (bool), `pool` (bool: participa en la sharechain/P2Pool),
 /// `threads` (n), `use_governor` (bool, por defecto true), `any_power` (bool), `min_battery` (0-100, por defecto 15),
 /// `pause_when_screen_on` (bool, por defecto true), `no_temp` (bool),

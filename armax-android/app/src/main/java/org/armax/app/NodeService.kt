@@ -34,7 +34,8 @@ class NodeService : Service() {
         private const val NOTIF_ID = 1
 
         fun sealedFile(ctx: Context) = File(ctx.filesDir, "wallet.sealed")
-        fun dataDir(ctx: Context) = File(ctx.filesDir, "chain")
+        /** Cada red guarda su cadena aparte (el archivo de bloques lleva el génesis de su red). `fast` conserva la carpeta original. */
+        fun dataDir(ctx: Context, network: String) = File(ctx.filesDir, if (network == "fast") "chain" else "chain-$network")
 
         fun start(ctx: Context) {
             ContextCompat.startForegroundService(ctx, Intent(ctx, NodeService::class.java))
@@ -70,7 +71,7 @@ class NodeService : Service() {
         val handle = try {
             val sealed = sealedFile(ctx).readBytes()
             val settings = SettingsStore(ctx).load()
-            dataDir(ctx).mkdirs()
+            dataDir(ctx, settings.network).mkdirs()
             Armax.startNode(configJson(settings), KeystoreVault().native(), sealed)
         } catch (e: Throwable) {
             NodeState.setError(e.message ?: e.toString())
@@ -104,7 +105,7 @@ class NodeService : Service() {
     private fun configJson(s: Settings): String {
         val c = JSONObject()
         c.put("network", s.network)
-        c.put("data_dir", dataDir(applicationContext).absolutePath)
+        c.put("data_dir", dataDir(applicationContext, s.network).absolutePath)
         c.put("mine", s.mine)
         c.put("pool", s.pool)
         c.put("threads", s.threads)

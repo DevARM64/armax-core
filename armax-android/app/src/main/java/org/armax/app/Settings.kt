@@ -4,8 +4,8 @@ import android.content.Context
 
 /** Ajustes del nodo. Se aplican al (re)iniciar el nodo. */
 data class Settings(
-    /** "fast" (red de pruebas con PoW reducido) o "devnet" (parámetros de consenso). */
-    val network: String = "fast",
+    /** "testnet" (red de pruebas pública, parámetros reales), "fast" (demostración con PoW reducido) o "devnet". */
+    val network: String = "testnet",
     /** Nodos a los que conectar: "IP:PUERTO,IP:PUERTO". */
     val connect: String = "",
     /** Claves fijadas: "IP:PUERTO=CLAVE64HEX,…". */

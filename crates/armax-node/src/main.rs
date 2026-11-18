@@ -17,7 +17,7 @@ armax-node — nodo de ARMax (red de desarrollo)
 USO
   armax-node new-wallet --wallet ARCHIVO
   armax-node address    --wallet ARCHIVO
-  armax-node run --data DIR --network fast|devnet [opciones]
+  armax-node run --data DIR --network fast|devnet|testnet [opciones]
 
 OPCIONES DE `run`
   --listen IP:PUERTO     acepta conexiones entrantes (nodo de servicio)
@@ -86,8 +86,8 @@ fn real_main(args: &[String]) -> Result<(), String> {
 }
 
 fn run(args: &[String]) -> Result<(), String> {
-    let network = Network::parse(&arg_value(args, "--network").ok_or("falta --network fast|devnet")?)
-        .ok_or("red desconocida (usa fast o devnet)")?;
+    let network = Network::parse(&arg_value(args, "--network").ok_or("falta --network fast|devnet|testnet")?)
+        .ok_or("red desconocida (usa fast, devnet o testnet)")?;
     let data_dir = PathBuf::from(arg_value(args, "--data").ok_or("falta --data DIR")?);
     let listen = arg_value(args, "--listen").map(|s| resolve(&s)).transpose()?;
     let connect = arg_values(args, "--connect").iter().map(|s| resolve(s)).collect::<Result<Vec<_>, _>>()?;

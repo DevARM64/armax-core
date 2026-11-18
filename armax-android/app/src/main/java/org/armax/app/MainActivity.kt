@@ -275,7 +275,13 @@ fun DashboardTab(vm: MainViewModel) {
             Spacer(Modifier.weight(1f))
             val net = status?.network ?: settings.network
             Chip(
-                stringResource(if (net == "fast") R.string.network_fast else R.string.network_devnet),
+                stringResource(
+                    when (net) {
+                        "fast" -> R.string.network_fast
+                        "testnet" -> R.string.network_testnet
+                        else -> R.string.network_devnet
+                    },
+                ),
                 MaterialTheme.colorScheme.primary,
             )
         }
@@ -696,7 +702,7 @@ fun SettingsTab(vm: MainViewModel) {
         Text(stringResource(R.string.settings_note), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
 
         Panel(title = stringResource(R.string.settings_network_section)) {
-            SwitchRow(stringResource(R.string.settings_testnet), network == "fast") { network = if (it) "fast" else "devnet" }
+            SwitchRow(stringResource(R.string.settings_testnet), network == "fast") { network = if (it) "fast" else "testnet" }
             OutlinedTextField(
                 value = connect,
                 onValueChange = { connect = it },
