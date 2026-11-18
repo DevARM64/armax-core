@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nodos públicos de arranque. Formato: "host:puerto,host:puerto" (host puede ser IP o dominio).
+         Vacío = sin semillas: el usuario las pone en Ajustes. -->
+    <string name="default_connect" translatable="false">2.29.163.248:8333</string>
+    <!-- Claves fijadas: "host:puerto=CLAVE64HEX,..." (la clave la imprime el nodo al arrancar el nodo con la opción listen). -->
+    <string name="default_pin" translatable="false">2.29.163.248:8333=dcff449ee769c49700e21e4b3a066ca471d3098cec29523fb24624de51d1c617</string>
+</resources>

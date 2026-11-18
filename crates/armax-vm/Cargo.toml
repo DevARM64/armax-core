@@ -1,0 +1,9 @@
+[package]
+name = "armax-vm"
+version = "0.1.0"
+edition = "2021"
+description = "VM de PoW de ARMax: 160 instrucciones, scratchpad de 384 MiB, backend AES para ARM64"
+
+# Sin dependencias externas a propósito: SHA-256 y AES portable están implementados
+# en el propio crate (y validados con vectores oficiales).
+[dependencies]

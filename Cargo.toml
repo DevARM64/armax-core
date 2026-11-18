@@ -1,0 +1,8 @@
+[workspace]
+resolver = "2"
+members = ["crates/armax-vm", "crates/armax-pow", "crates/armax-chain", "crates/armax-share", "crates/armax-thermal", "crates/armax-keys", "crates/armax-ledger", "crates/armax-store", "crates/armax-mempool", "crates/armax-net", "crates/armax-node", "crates/armax-ffi"]
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1

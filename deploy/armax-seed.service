@@ -1,0 +1,16 @@
+[Unit]
+Description=ARMax seed node (relay, no mining)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=armax
+ExecStart=/opt/armax/armax-node run --network fast --data /var/lib/armax --listen 0.0.0.0:8333 --pool
+Restart=always
+RestartSec=5
+LimitNOFILE=4096
+# la clave del nodo (node.key) vive en --data; no la borres: los teléfonos la tienen fijada
+StateDirectory=armax
+
+[Install]
+WantedBy=multi-user.target

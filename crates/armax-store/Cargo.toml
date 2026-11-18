@@ -1,0 +1,13 @@
+[package]
+name = "armax-store"
+version = "0.1.0"
+edition = "2021"
+description = "Persistencia de ARMax: registro de bloques de solo añadir, con checksum y recuperación tras cortes"
+
+[dependencies]
+armax-chain = { path = "../armax-chain" }
+armax-ledger = { path = "../armax-ledger" }
+armax-vm = { path = "../armax-vm" }
+
+[dev-dependencies]
+armax-keys = { path = "../armax-keys" }

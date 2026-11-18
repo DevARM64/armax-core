@@ -1,0 +1,9 @@
+[package]
+name = "armax-keys"
+version = "0.1.0"
+edition = "2021"
+description = "Llaves de ARMax: BIP-39, SLIP-0010, Ed25519, direcciones y transacciones, sin dependencias externas"
+
+[dependencies]
+armax-vm = { path = "../armax-vm" }
+armax-chain = { path = "../armax-chain" }

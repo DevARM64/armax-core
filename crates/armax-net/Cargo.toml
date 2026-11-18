@@ -1,0 +1,15 @@
+[package]
+name = "armax-net"
+version = "0.1.0"
+edition = "2021"
+description = "Red P2P de ARMax: protocolo, máquina de estados del nodo (sin E/S) y transporte TCP"
+
+[dependencies]
+armax-chain = { path = "../armax-chain" }
+armax-keys = { path = "../armax-keys" }
+armax-ledger = { path = "../armax-ledger" }
+armax-mempool = { path = "../armax-mempool" }
+armax-pow = { path = "../armax-pow" }
+armax-share = { path = "../armax-share" }
+armax-store = { path = "../armax-store" }
+armax-vm = { path = "../armax-vm" }

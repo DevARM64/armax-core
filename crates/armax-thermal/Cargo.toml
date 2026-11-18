@@ -1,0 +1,8 @@
+[package]
+name = "armax-thermal"
+version = "0.1.0"
+edition = "2021"
+description = "Gobernador térmico de ARMax: decide cuántos hilos de minado correr según temperatura, carga y memoria"
+
+[dependencies]
+armax-vm = { path = "../armax-vm" }

@@ -1,0 +1,10 @@
+[package]
+name = "armax-ledger"
+version = "0.1.0"
+edition = "2021"
+description = "Libro mayor de ARMax: ejecuta las transacciones de los bloques sobre la cadena con más trabajo, con reorganizaciones"
+
+[dependencies]
+armax-chain = { path = "../armax-chain" }
+armax-keys = { path = "../armax-keys" }
+armax-pow = { path = "../armax-pow" }

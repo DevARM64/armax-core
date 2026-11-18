@@ -1,0 +1,14 @@
+[package]
+name = "armax-share"
+version = "0.1.0"
+edition = "2021"
+description = "Sharechain de ARMax: pool descentralizado voluntario (P2Pool) para mineros pequeños"
+
+[dependencies]
+armax-vm = { path = "../armax-vm" }
+armax-pow = { path = "../armax-pow" }
+armax-chain = { path = "../armax-chain" }
+armax-keys = { path = "../armax-keys" }
+
+[dev-dependencies]
+armax-ledger = { path = "../armax-ledger" }

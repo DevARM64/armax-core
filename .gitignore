@@ -1,0 +1,45 @@
+# Compilados de Rust
+target/
+**/target/
+
+# Identidad y secretos: NUNCA al repositorio
+node.key
+*.key
+*.pem
+*.jks
+*.keystore
+keystore.properties
+
+# Carteras y datos de prueba de los nodos
+wallet*.json
+wallet*.dat
+*.wallet
+blocks.db
+shares.db
+sent.log
+DATA/
+data/
+armax-b2/
+armax-data*/
+
+# Android / Gradle
+.gradle/
+build/
+local.properties
+.idea/
+*.iml
+armax-android/app/src/main/jniLibs/
+
+# Archivos de sistema y editores
+.DS_Store
+Thumbs.db
+*.swp
+*.log
+
+# Respaldos y paquetes
+RESPALDO/
+*.7z
+*.zip
+*.tar.gz
+*.apk
+*.aab

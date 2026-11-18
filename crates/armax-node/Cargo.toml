@@ -1,0 +1,25 @@
+[package]
+name = "armax-node"
+version = "0.1.0"
+edition = "2021"
+description = "Nodo ejecutable de ARMax: red, disco, cartera, minero con gobernador térmico"
+
+[lib]
+name = "armax_node"
+path = "src/lib.rs"
+
+[[bin]]
+name = "armax-node"
+path = "src/main.rs"
+
+[dependencies]
+armax-chain = { path = "../armax-chain" }
+armax-keys = { path = "../armax-keys" }
+armax-ledger = { path = "../armax-ledger" }
+armax-mempool = { path = "../armax-mempool" }
+armax-net = { path = "../armax-net" }
+armax-pow = { path = "../armax-pow" }
+armax-share = { path = "../armax-share" }
+armax-store = { path = "../armax-store" }
+armax-thermal = { path = "../armax-thermal" }
+armax-vm = { path = "../armax-vm" }

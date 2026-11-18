@@ -1,0 +1,10 @@
+[package]
+name = "armax-mempool"
+version = "0.1.0"
+edition = "2021"
+description = "Mempool de ARMax: admisión, reemplazo por comisión, límites de memoria y reorganizaciones"
+
+[dependencies]
+armax-chain = { path = "../armax-chain" }
+armax-keys = { path = "../armax-keys" }
+armax-ledger = { path = "../armax-ledger" }

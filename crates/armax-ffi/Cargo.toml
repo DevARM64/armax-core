@@ -1,0 +1,15 @@
+[package]
+name = "armax-ffi"
+version = "0.1.0"
+edition = "2021"
+description = "Interfaz C (ABI estable) del nodo ARMax para la app Android: cartera con Keystore, nodo, minería y envíos"
+
+[lib]
+name = "armax_ffi"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+armax-chain = { path = "../armax-chain" }
+armax-keys = { path = "../armax-keys" }
+armax-node = { path = "../armax-node" }
+armax-thermal = { path = "../armax-thermal" }

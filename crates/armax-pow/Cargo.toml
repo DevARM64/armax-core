@@ -1,0 +1,8 @@
+[package]
+name = "armax-pow"
+version = "0.1.0"
+edition = "2021"
+description = "Consenso PoW de ARMax: cabecera, objetivo de 256 bits, dificultad LWMA y validación"
+
+[dependencies]
+armax-vm = { path = "../armax-vm" }

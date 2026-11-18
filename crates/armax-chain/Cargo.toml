@@ -1,0 +1,9 @@
+[package]
+name = "armax-chain"
+version = "0.1.0"
+edition = "2021"
+description = "Cadena de ARMax: emisión, coinbase, amortiguador por dirección y elección por trabajo acumulado"
+
+[dependencies]
+armax-vm = { path = "../armax-vm" }
+armax-pow = { path = "../armax-pow" }

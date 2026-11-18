@@ -1,0 +1,9 @@
+# En ARM64 se habilitan las extensiones AES/NEON en tiempo de compilación para que
+# `armax_vm::aes::Native` use los intrínsecos de hardware (vaeseq_u8 / vaesmcq_u8).
+# Si el CPU no las tiene, el nodo debe comprobarlo al arrancar con
+# `armax_vm::aes::native_aes_available()` antes de minar.
+[target.aarch64-linux-android]
+rustflags = ["-C", "target-feature=+aes,+neon"]
+
+[target.aarch64-unknown-linux-gnu]
+rustflags = ["-C", "target-feature=+aes,+neon"]
