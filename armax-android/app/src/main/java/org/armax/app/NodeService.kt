@@ -113,6 +113,9 @@ class NodeService : Service() {
         c.put("min_battery", s.minBattery)
         c.put("pause_when_screen_on", !s.mineWithScreenOn)
         c.put("use_governor", true)
+        // La cadena y los shares del disco los escribió este mismo nodo (carpeta privada de la app) tras verificarlos:
+        // no se vuelve a calcular su PoW al arrancar. Sin esto el arranque tarda minutos y crece con la cadena.
+        c.put("trust_store", true)
         if (s.connect.isNotBlank()) c.put("connect", s.connect.trim())
         if (s.pin.isNotBlank()) c.put("pin", s.pin.trim())
         return c.toString()
