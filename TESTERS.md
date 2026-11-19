@@ -11,7 +11,7 @@
 * No es necesario configurar nada de red: la app trae el nodo semilla del proyecto.
 
 ## Instalar
-1. Descarga el APK: **https://github.com/DevARM64/armax-core/releases/download/v0.1.4-testnet/ARMax-testnet-0.1.4.apk** (compara el SHA-256 con el publicado: `0433F4E0EFCC3AC4477DD8C55F951201C83E50D7DD14A9107370309BCB4BFEB1`).
+1. Descarga el APK: **https://github.com/DevARM64/armax-core/releases/download/v0.1.5-testnet/ARMax-testnet-0.1.5.apk** (compara el SHA-256 con el publicado: ` 25E262971E592E02284E12457490ECDC3EA3981F16C2BA4F869FA32E3501B40D`).
 2. Ábrelo y acepta "instalar apps de origen desconocido" para tu navegador o gestor de archivos.
 3. Abre ARMax y permite las notificaciones. El chip superior debe decir **TESTNET**.
 4. Al crear la cartera, **anota la frase de respaldo en papel**. No la compartas ni la publiques.
@@ -44,7 +44,7 @@ Nos interesa especialmente: no sincroniza, se cierra, se calienta o gasta mucha 
 * No network setup needed: the app ships with the project's seed node.
 
 ### Install
-1. Download the APK: **https://github.com/DevARM64/armax-core/releases/download/v0.1.4-testnet/ARMax-testnet-0.1.4.apk** (compare its SHA-256 with the published one: `0433F4E0EFCC3AC4477DD8C55F951201C83E50D7DD14A9107370309BCB4BFEB1`).
+1. Download the APK: **https://github.com/DevARM64/armax-core/releases/download/v0.1.5-testnet/ARMax-testnet-0.1.5.apk** (compare its SHA-256 with the published one: ` 25E262971E592E02284E12457490ECDC3EA3981F16C2BA4F869FA32E3501B40D`).
 2. Open it and allow "install unknown apps" for your browser or file manager.
 3. Open ARMax and allow notifications. The top chip must read **TESTNET**.
 4. When the wallet is created, **write the recovery phrase on paper**. Do not share or post it.
